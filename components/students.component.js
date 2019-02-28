@@ -22,7 +22,7 @@ class Home extends React.Component {
     render() {
        return (
           <div>
-             <h2><center>Students List</center></h2>
+             <h2><center>Students List</center></h2>             
              <table className="table  table-striped" border="1">
              <thead>
                 <tr>
