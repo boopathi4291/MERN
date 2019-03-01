@@ -9,7 +9,8 @@ module.exports = {
    },
    devServer: {
       inline: true,
-      port: 8085
+      port: 8085,
+      historyApiFallback:true
    },
    module: {
       rules: [
