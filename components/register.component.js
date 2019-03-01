@@ -46,19 +46,19 @@ class Aboutus extends React.Component {
        )
     }
     onsub(e) {
-       //console.log('****'+this.state.uname);
+       let data ={
+          name: this.state.name,
+          email: this.state.email,
+          mobile: this.state.mobile
+       }
        e.preventDefault();
-       fetch('http://192.168.0.13:8080/students/ins/' + this.state.name + '/' + this.state.email + '/' + this.state.mobile ).
-       then((a) => a.json()).
-       then(b =>{
-          this.setState({
-             name: '',
-             email:'',
-             mobile:''
-          }
-          )
-       });
-      
+       fetch('http://192.168.0.13:8080/students/ins', {
+         method: 'POST', // or 'PUT'
+         body: JSON.stringify(data), // data can be `string` or {object}!
+         headers:{
+           'Content-Type': 'application/json'
+         }
+       }).then(res => {res.json()});
     }
  
     render() {
