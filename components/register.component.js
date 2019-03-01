@@ -8,7 +8,7 @@ import React, { Component } from 'react';
 // }
 
 
-class Aboutus extends React.Component {
+class Register extends React.Component {
 
     constructor() {
        super();
@@ -84,4 +84,4 @@ class Aboutus extends React.Component {
        );
     }
  }
- export default Aboutus 
+ export default Register 
