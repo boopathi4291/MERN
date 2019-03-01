@@ -30,7 +30,18 @@ router.get('/ins/:name/:email/:mobile',(req,res)=>{
         }
    });
 });
-
+router.post('/ins',(req,res)=>{
+    let record = {name:req.body.name, email:req.body.email,mobile:req.body.mobile};
+    let student = new Students(record);
+    student.save((err)=>{
+         if(err){
+             console.log(err);
+         }
+         else{
+             res.send("success")
+         }
+    });
+ });
 router.get('/ups/:name/:email/:mobile', function (req, res) {
     var aName = req.params.name;
     var aEmail = req.params.email;
